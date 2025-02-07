@@ -1,0 +1,210 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  text-align: center;
+  background: rgba(45, 45, 45, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #fff;
+}
+
+.scores {
+  text-align: left;
+}
+
+.scores p {
+  margin: 0;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.scores span {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+/* Target Color Box */
+.color-box {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border: 2px solid #444;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Color Options */
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.color-option {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Instructions */
+.game-instructions {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ccc;
+}
+
+/* Game Status */
+.game-status {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: bold;
+  animation: fadeOut 2s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* New Game Button */
+.new-game-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.new-game-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Rules Icon */
+.rules-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rules-icon:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Rules Modal */
+.rules-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(45, 45, 45, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 300px;
+  width: 100%;
+  color: #fff;
+}
+
+.rules-modal h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.rules-modal p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.rules-modal button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rules-modal button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .color-box {
+    width: 120px;
+    height: 120px;
+  }
+
+  .color-option {
+    width: 60px;
+    height: 60px;
+  }
+}
